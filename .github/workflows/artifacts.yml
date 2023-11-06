@@ -12,7 +12,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          path: "github-pages"
+          path: model\github-pages.gz
   # Deploy job
   deploy:
     # Add a dependency to the build job

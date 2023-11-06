@@ -10,7 +10,9 @@ jobs:
       name: github-pages
     steps:
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: model/
 
   # Deploy job
   deploy:

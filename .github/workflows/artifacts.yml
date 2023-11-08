@@ -10,7 +10,7 @@ jobs:
       name: github-pages
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2
         with:
@@ -37,3 +37,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action
+  lfs-checkout:
+    needs: deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: lfs-checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true

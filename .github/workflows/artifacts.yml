@@ -12,7 +12,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2
         with:
-          path: model/model_orto1m.tar
+          path: model
 
   # Deploy job
   deploy:
